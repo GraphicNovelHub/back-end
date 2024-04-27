@@ -1,0 +1,39 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    #    JDBC : SGDB :// HOST : PORT / DB
+    url: jdbc:postgresql://localhost:5432/ficuniverse
+    username: postgres
+    password: password
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+documentation:
+  application:
+    description: FicUniverse API service
+    version: 1.0
+
+pringdoc:
+  # Contract endpoint: http://localhost:8090/v3/api-docs
+  api-docs:
+    path: /api-docs
+  # Documentation endpoint: http://localhost:8090/swagger-ui/index.html
+  swagger-ui:
+    path: /swagger-ui/index.html
+
+application:
+  security:
+    jwt:
+      secret-key: 3777217A25432A462D4A614E645267556B58703273357538782F413F4428472B
+      expiration: 86400000
+      refresh-token:
+        expiration: 604800000
