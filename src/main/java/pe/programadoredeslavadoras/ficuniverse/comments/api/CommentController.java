@@ -26,8 +26,6 @@ public class CommentController {
     private final CommentService commentService;
     private final CommentMapper commentMapper;
 
-
-
     @Operation(
             summary = "Add a new comment to the fanfic" ,
             description = "Add a new comment to the fanfic",
