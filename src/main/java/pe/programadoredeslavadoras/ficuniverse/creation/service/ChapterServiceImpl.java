@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import pe.programadoredeslavadoras.ficuniverse.creation.domain.model.entities.Chapter;
 import pe.programadoredeslavadoras.ficuniverse.creation.domain.persistence.ChapterRepository;
 import pe.programadoredeslavadoras.ficuniverse.creation.domain.service.ChapterService;
-import pe.programadoredeslavadoras.ficuniverse.fanfic.domain.persistence.FanficRepository;
+import pe.programadoredeslavadoras.ficuniverse.store.domain.persistence.FanficRepository;
 import pe.programadoredeslavadoras.ficuniverse.shared.exceptions.FetchIdNotFoundException;
 import pe.programadoredeslavadoras.ficuniverse.shared.exceptions.FetchNotFoundException;
 import pe.programadoredeslavadoras.ficuniverse.shared.exceptions.ResourceValidationException;

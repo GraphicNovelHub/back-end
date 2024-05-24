@@ -30,20 +30,19 @@ public class User implements UserDetails {
 
     @NotNull
     @NotBlank
-    @Size(min = 1, max = 15)
-    @Column(name = "user_name", nullable = false, length = 100)
+    @Column(name = "user_name", nullable = false)
     private String userName;
 
     @NotNull
     @NotBlank
     @Size(min = 1, max = 50)
-    @Column(name = "email", nullable = false, length = 100)
+    @Column(name = "email", nullable = false)
     private String email;
 
     @NotNull
     @NotBlank
     @Size(min = 1, max = 100)
-    @Column(name = "password", nullable = false, length = 100)
+    @Column(name = "password", nullable = false)
     private String password;
 
     @Enumerated(EnumType.STRING)

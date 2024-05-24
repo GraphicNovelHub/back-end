@@ -1,7 +1,7 @@
 package pe.programadoredeslavadoras.ficuniverse.profile.resource;
 
 import lombok.*;
-import pe.programadoredeslavadoras.ficuniverse.fanfic.domain.model.entitie.Fanfic;
+import pe.programadoredeslavadoras.ficuniverse.store.domain.model.entitie.Fanfic;
 
 import java.util.List;
 

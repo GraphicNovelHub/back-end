@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
-import pe.programadoredeslavadoras.ficuniverse.fanfic.domain.model.entitie.Fanfic;
+import pe.programadoredeslavadoras.ficuniverse.store.domain.model.entitie.Fanfic;
 
 import java.util.List;
 

@@ -1,17 +1,15 @@
-package pe.programadoredeslavadoras.ficuniverse.fanfic.service;
+package pe.programadoredeslavadoras.ficuniverse.store.service;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
-import static org.junit.jupiter.api.Assertions.*;
 
-import jakarta.validation.ConstraintViolation;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import pe.programadoredeslavadoras.ficuniverse.fanfic.domain.model.entitie.Fanfic;
-import pe.programadoredeslavadoras.ficuniverse.fanfic.domain.persistence.FanficRepository;
+import pe.programadoredeslavadoras.ficuniverse.store.domain.model.entitie.Fanfic;
+import pe.programadoredeslavadoras.ficuniverse.store.domain.persistence.FanficRepository;
 import pe.programadoredeslavadoras.ficuniverse.shared.exceptions.FetchIdNotFoundException;
 import pe.programadoredeslavadoras.ficuniverse.shared.exceptions.FetchNotFoundException;
 

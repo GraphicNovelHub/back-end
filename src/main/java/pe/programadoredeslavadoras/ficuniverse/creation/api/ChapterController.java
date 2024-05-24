@@ -3,6 +3,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,19 +20,20 @@ import pe.programadoredeslavadoras.ficuniverse.shared.exceptions.InternalServerE
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static org.springframework.http.MediaType.APPLICATION_JSON_VALUE;
+
 @CrossOrigin(origins = "*")
 @AllArgsConstructor
 @RestController
-@RequestMapping("/api/ficuniverse/v1/chapters")
+@RequestMapping(value = "/api/ficuniverse/v1/products", produces = APPLICATION_JSON_VALUE)
+@Tag(name = "Product", description = "Products Management Endpoints")
 public class ChapterController {
     private final ChapterService chapterService;
     private final ChapterMapper chapterMapper;
 
-
-
     @Operation(
-            summary = "Add a new chapter to the fanfic" ,
-            description = "Add a new chapter to the fanfic",
+            summary = "Add a new product to the store" ,
+            description = "Add a new product to the store",
             operationId = "addChapter",
             responses = {
                     @ApiResponse(
@@ -52,7 +54,7 @@ public class ChapterController {
                     )
             }
     )
-    @PostMapping("fanfic/{id}")
+    @PostMapping("{id}/product")
     public ResponseEntity<ChapterResource> save(@PathVariable(name = "id") Integer id,@RequestBody CreateChapterResource resource){
         return new ResponseEntity<>(
             chapterMapper.toResource(chapterService.createChapter(id,chapterMapper.toEntity(resource))),
